@@ -29,27 +29,27 @@ example ./disk_alert.sh <command> [arguments...]
 ## 1. disk_alert
 Checks the free disk space on the root (/) filesystem and alerts if it falls below the specified threshold percentage.
 Usage:
-./system_utils.sh disk-space-alert <threshold_percentage>
+./disk_alert.sh disk-space-alert <threshold_percentage>
 
 Example:
-./system_utils.sh disk-space-alert 20
+./disk_alert.sh disk-space-alert 20
 
 Output (if free space is 30%): All good. Free space is 30%.Output (if free space is 10%): Warning: Free space on / is below 20%.
 
 ## 2. service_check
 Checks if a specified service is active. If inactive, it attempts to restart it (requires sudo).
 Usage:
-./system_utils.sh service-health-check <service_name>
+./service_check.sh service-health-check <service_name>
 
 Example:
-./system_utils.sh service-health-check apache2
+./service_check.sh service-health-check apache2
 
 Output (if active): Service is running.Output (if inactive): Service apache2 is inactive. Restarting... Service restarted.
 
 ## 3. backup_verify
 Verifies the existence of a backup file in the /backups/ directory.
 Usage:
-./system_utils.sh verify-backup <backup_filename>
+./backup_verify.sh verify-backup <backup_filename>
 
 Example:
 ./system_utils.sh verify-backup database_2025-07-19.tar.gz
@@ -59,20 +59,20 @@ Output (if exists): Backup OK: /backups/database_2025-07-19.tar.gz exists.Output
 ## 4. dir_check
 Checks if a directory exists. If it doesn't, creates it with permissions 0755.
 Usage:
-./system_utils.sh check-directory <dir_path>
+./dir_check.sh check-directory <dir_path>
 
 Example:
-./system_utils.sh check-directory /tmp/myfolder
+./dir_check.sh check-directory /tmp/myfolder
 
 Output (if exists): Directory already exists: /tmp/myfolderOutput (if created): Directory created: /tmp/myfolder
 
 ## 5. greet
 Prints a greeting based on the current time of day.
 Usage:
-./system_utils.sh time-greeting
+./greet.sh time-greeting
 
 Example:
-./system_utils.sh time-greeting
+./greet.sh time-greeting
 
 Output (e.g., at 10 AM): Good morningOutput (e.g., at 3 PM): Good afternoonOutput (e.g., at 8 PM): Good evening
 Notes
