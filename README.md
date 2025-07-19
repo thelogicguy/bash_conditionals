@@ -28,7 +28,8 @@ example ./disk_alert.sh <command> [arguments...]
 
 ## 1. disk_alert
 Checks the free disk space on the root (/) filesystem and alerts if it falls below the specified threshold percentage.
-Usage:
+
+### Usage:
 ./disk_alert.sh disk-space-alert <threshold_percentage>
 
 Example:
@@ -38,7 +39,8 @@ Output (if free space is 30%): All good. Free space is 30%.Output (if free space
 
 ## 2. service_check
 Checks if a specified service is active. If inactive, it attempts to restart it (requires sudo).
-Usage:
+
+### Usage:
 ./service_check.sh service-health-check <service_name>
 
 Example:
@@ -48,7 +50,7 @@ Output (if active): Service is running.Output (if inactive): Service apache2 is 
 
 ## 3. backup_verify
 Verifies the existence of a backup file in the /backups/ directory.
-Usage:
+### Usage:
 ./backup_verify.sh verify-backup <backup_filename>
 
 Example:
@@ -58,7 +60,7 @@ Output (if exists): Backup OK: /backups/database_2025-07-19.tar.gz exists.Output
 
 ## 4. dir_check
 Checks if a directory exists. If it doesn't, creates it with permissions 0755.
-Usage:
+### Usage:
 ./dir_check.sh check-directory <dir_path>
 
 Example:
@@ -68,7 +70,8 @@ Output (if exists): Directory already exists: /tmp/myfolderOutput (if created): 
 
 ## 5. greet
 Prints a greeting based on the current time of day.
-Usage:
+
+### Usage:
 ./greet.sh time-greeting
 
 Example:
